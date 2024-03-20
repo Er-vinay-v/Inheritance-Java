@@ -1,0 +1,125 @@
+﻿Assignment Solutions
+
+
+1.What is Inheritance in Java?
+Ans: In java Inheritance is the most important pillar of Oops.It is the mechanism which is used to inherit parent class or superclass property  in child class or subclass by using extends keyword.
+It provide most important features in java like 
+→Code reusability : if i have some common property then it declares parent class and uses child class without creating the same property in child class.
+→Methods overriding: method overloading is only possible through inheritance.it is one of the ways by which Java achieves Runtime polymorphism.
+→Abstraction:it means if i Inherits the super class property in child class then in this class no visible property of parent class ,but it is internally available behind the scenes,so it is called Abstraction.
+
+
+2.What are superclasses and subclasses?
+Ans: In general both are classes but sum differences which is classified superclasses and subclasses lates we know about shown below details –
+→Later we took an example and tried to explain superclass and subclass. Suppose I create two classes ,class A and Class B .Both the classes have some independent property until I will not establish any relationship ,boot classes are normal classes. If i need for sum method which is available in class A and i don't write again same method in Class B in this case i need to establish a relation between two classes .so in this condition there come a keyword i.e extends .After using this keyword in class B then all the class A property inherited in class B.Now in this condition class A is parent or superclass of class B(subclass).so i hope you got it what is superclass and subclass.
+
+
+
+
+3. How is Inheritance implemented/achieved in Java?
+Ans : In java inheritance implemented/achieved in two ways–
+1.by using extends keyword
+2.by using implements keywords
+ 
+extends keyword → which keyword is used to inherit property between two classes and interfaces.
+
+
+Implements keyword→ which keyword is used to inherit property between interfaces and classes.
+
+
+4.What is polymorphism ?
+Ans: is a concept by which we can perform a single action in different ways. Polymorphism is derived from 2 Greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms.
+In java we can achieve two ways of polymorphism such as runtime and compile time polymorphism.
+Runtime polymorphism achieved by using methods overriding and 
+Compile Time polymorphism achieved by using methods overloading.
+
+
+5. Differentiate between method overloading and method overriding.
+Ans:There are many differences b/w method overloading and method overriding –
+
+
+overloading
+	overriding
+	1.having the same name but different parameters and different return type of signature.
+	Having the same name, same parameters and same return type.
+	2.implements compile time polymorphism
+	Implements runtime polymorphism
+	3.if we want to change the return type the compiler will not throw any error. 
+	But in method overriding if we want to change its return type then the  compiler will throw an error.
+	4.method overloading allows modifying down and upcasting.
+	It can’t allow down casting only to allow upcasting modifiers otherwise the compiler gives error.
+	
+
+6.What is an Abstraction explained with an example ?
+Ans:Abstraction is one of the most important pillars of Oops in java.Abstraction is used to hide the data from the users or in a simple way it provides only necessary data of users. Abstraction is a reserved keyword  in Java .If I use an abstract keyword over a class and method .Then it provides me with some special functionality. If I will declare an abstract keyword over the class then at least one abstract method should be available inside this class. Lates take an example –
+
+
+Public class abstract Example{
+//abstract method
+ void display();
+//non abstract method
+void greed(){
+System.out.print(“hii mam/sir good morning”);
+}
+public class Test extends Example{
+void display(){
+System.out.println(“Hi i am vinay from USA”)
+}
+
+
+public class Main{
+
+
+public static void main(String[] argos){
+
+
+Test t=new Test();
+t.display();
+t.greed();
+
+
+}
+}
+
+
+7.What is the difference between an abstract method and final method in Java ? Explain with an example.
+Ans :The abstract method is incomplete while the final method is regarded as complete. The only way to use an abstract method is by overriding it, but you cannot override a final method in Java.
+
+
+8.what is the final class in java?
+Ans: A class declared with the final keyword is known as the final class. A final class can’t be inherited by subclasses. By using the final class, we can restrict the inheritance of the class. We can create a class as a final class only if it is complete in nature, which means it must not be an abstract class. In java, all the wrapper classes are final classes like String, Integer, etc.If we try to inherit a final class, then the compiler throws an error at compilation time. We can’t create a class as immutable without the final class.
+
+
+9. Differentiate between abstraction and encapsulation.
+
+
+
+
+
+
+
+
+Abstraction
+	Encapsulation
+	In abstraction, problems are solved at the design or interface level.
+	While in encapsulation, problems are solved at the implementation level.
+	Abstraction is the method of hiding unwanted information.
+	Whereas encapsulation is a method to hide the data in a single entity or unit along with a method to protect information from outside.
+	We can implement abstraction using abstract classes and interfaces.
+	Whereas encapsulation can be implemented using an access modifier i.e. private, protected and public.
+	The objects that help to perform abstraction are encapsulated.
+	Whereas the objects that result in encapsulation need not be abstracted.
+	
+
+
+
+10. Difference between Runtime and compile time polymorphism explain with an example
+Ans : 
+Runtime Polymorphism
+	Compile Time polymorphism
+	1.In Compile time Polymorphism, the call is resolved by the compiler.
+	In Run time Polymorphism, the call is not resolved by the compiler.
+	It is also known as Static binding, Early binding and overloading as well.
+	It is also known as Dynamic binding, Late binding and overriding as well.
+	It is achieved by function overloading and operator overloading.
+	It is achieved by virtual functions and pointers.
